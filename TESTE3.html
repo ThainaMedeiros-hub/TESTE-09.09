@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Soma</title>
+</head>
+<body>
+  <label for="numero">Digite um número:</label>
+  <input type="number" id="numero">
+  <button onclick="calcularSoma()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularSoma() {
+      // Pega o valor digitado pelo usuário
+      const indice = parseInt(document.getElementById('numero').value);
+
+      // Inicializa as variáveis
+      let soma = 0;
+      let k = 1;
+
+      // Calcula a soma
+      while (k < indice) {
+        k++;
+        soma += k;
+      }
+
+      // Exibe o resultado
+      document.getElementById('resultado').textContent = `A soma dos números de 1 até ${indice} é: ${soma}`;
+    }
+  </script>
+</body>
+</html>
