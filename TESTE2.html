@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contador de Letras "a"</title>
+</head>
+<body>
+  <input type="text" id="texto" placeholder="Digite sua frase aqui">
+  <button onclick="contarLetrasA()">Contar "a"</button>
+  <p id="resultado"></p>
+
+  <script>
+    function contarLetrasA() {
+      // Pega o texto digitado pelo usuário
+      const texto = document.getElementById('texto').value;
+
+      // Converte todo o texto para minúsculas para facilitar a contagem
+      const textoMinusculo = texto.toLowerCase();
+
+      // Conta as ocorrências da letra "a"
+      const quantidade = textoMinusculo.split('a').length - 1;
+
+      // Exibe o resultado na página
+      const resultado = document.getElementById('resultado');
+      resultado.textContent = `A letra 'a' aparece ${quantidade} vezes.`;
+    }
+  </script>
+</body>
+</html>
